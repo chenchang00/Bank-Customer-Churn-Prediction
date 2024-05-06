@@ -36,9 +36,6 @@ def data_transformation(data):
         ('onehot', OneHotEncoder(drop='if_binary'))
     ])
     card_tranformer = Pipeline(steps=[
-        ('type to num', ()),
-    ])
-    card_tranformer = Pipeline(steps=[
         ('extract_first_digit', type_to_num())
     ])
     Nothing = Pipeline(steps=[
